@@ -371,6 +371,7 @@ function runSpawn(spawn) {
         }
     }
 
+    console.log(creepBody);
     if (spawnName) {
         let creepBody = [];
         if (creepExpand) {
