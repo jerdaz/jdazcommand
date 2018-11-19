@@ -371,7 +371,6 @@ function runSpawn(spawn) {
         }
     }
 
-    console.log(creepBody);
     if (spawnName) {
         let creepBody = [];
         if (creepExpand) {
@@ -381,6 +380,7 @@ function runSpawn(spawn) {
         } else {
             creepBody = creepBase;
         }
+        console.log(creepBody);
         spawn.spawnCreep(creepBody, spawnName, {memory: {rol: rol, homeRoomName: spawn.room.name}});    
     }
 }
