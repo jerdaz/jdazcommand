@@ -376,7 +376,7 @@ function runSpawn(spawn) {
         if (creepExpand) {
             let bodyBlocks = Math.floor(room.energyCapacityAvailable/creepEnergy);
             if (_.isEmpty(_.filter(Game.creeps,o => o.memory.homeRoomName == room.name))) bodyBlocks = Math.floor(room.energyAvailable/creepEnergy);
-            for (let i = 0;i < bodyBlocks && bodyBlocks.length + creepBody.length <= 50; i++) creepBody = creepBody.concat(creepBase);
+            for (let i = 0;i < bodyBlocks && creepBase.length + creepBody.length <= 50; i++) creepBody = creepBody.concat(creepBase);
         } else {
             creepBody = creepBase;
         }
