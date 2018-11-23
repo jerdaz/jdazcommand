@@ -323,7 +323,7 @@ function runSpawn(spawn) {
             }
             break;
         case COLOR_YELLOW: // claimer
-            if (prioriteit <=20) break;
+            if (prioriteit <=2) break;
             for (let i=0; i < aantalCreeps; i++) {
                 let creepName = 'c' + i + flagName;;
                 let creep = Game.creeps[creepName];
@@ -332,7 +332,7 @@ function runSpawn(spawn) {
                     creepBase = [MOVE,MOVE,CLAIM];
                     creepEnergy = 650;
                     rol = 'claimer'
-                    prioriteit = 20;
+                    prioriteit = 2;
                     i=99;
                 }
             }
@@ -380,7 +380,6 @@ function runSpawn(spawn) {
         } else {
             creepBody = creepBase;
         }
-        console.log(creepBody);
         spawn.spawnCreep(creepBody, spawnName, {memory: {rol: rol, homeRoomName: spawn.room.name}});    
     }
 }
